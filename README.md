@@ -14,6 +14,7 @@ Working on a custom MIDI controller to fit in a 19" mixer rack. Total dimensions
 - Teensy board
 - Joystick potentiometer
 - Slide potentiometer
+- Electric wires
 
 ## How it works
 
