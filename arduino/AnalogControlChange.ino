@@ -13,8 +13,6 @@ const int channel = 1;
 
 
 void setup() {
-  Serial.begin(9600);
-
   pinMode(A0, INPUT);
 }
 
@@ -33,8 +31,9 @@ void loop() {
     int n1 = analogRead(A1); // 0-1024
 
     int pitchValue = map(n0, 0, 1024, -8191, 8191);
+    int modValue = map(n1, 0, 1024, 0, 127);
     
-    // only transmit MIDI messages if analog input changed
+    // only transmit MIDI messages if analog input;;  changed
     if (n0 != previousA0) {
       usbMIDI.sendPitchBend(pitchValue, channel);
       previousA0 = n0;
@@ -42,7 +41,7 @@ void loop() {
 
     if (n1 != previousA1) {
       // 1 for MOD wheel
-      usbMIDI.sendControlChange(1, n1, channel);
+      usbMIDI.sendControlChange(1, modValue, channel);
       previousA1 = n1;
     }
   }

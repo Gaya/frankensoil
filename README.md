@@ -2,6 +2,8 @@
 
 Working on a custom MIDI controller to fit in a 19" mixer rack. Total dimensions are: 49cm x 13cm. The plan is to create a wooden plate and carve / saw room for the different parts. 
 
+[Read about the creation process or HOW ITS MADE](./HOW_ITS_MADE.md).
+
 ## Features:
 - 2 Octave Keybed
 - Octave shift buttons
